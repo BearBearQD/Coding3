@@ -3,13 +3,13 @@ using ParadoxNotion.Design;
 using UnityEngine;
 
 
-namespace NodeCanvas.Tasks.Conditions {
+namespace NodeCanvas.Tasks.Conditions
+{
 
-	public class NeedsChargeCT : ConditionTask {
-
+    public class OverValueCT : ConditionTask
+    {
         public BBParameter<float> currentValue;
         public float threshold;
-
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -34,8 +34,8 @@ namespace NodeCanvas.Tasks.Conditions {
         //Return whether the condition is success or failure.
         protected override bool OnCheck()
         {
-            bool isUnderThreshold = currentValue.value < threshold;
-            return isUnderThreshold;
+            bool isOverThreshold = currentValue.value > threshold;
+            return isOverThreshold;
         }
     }
 }

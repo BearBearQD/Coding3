@@ -4,22 +4,17 @@ using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
-	//Moving towards a target
 
-	public class ApproachAT : ActionTask {
-
-        public Transform targetTransform;
-        public BBParameter<float> speed;
+	public class IncreaseChargeAT : ActionTask {
+        public float rateOfChange;
+        public BBParameter<float> currentValue;
+        //private Blackboard agentBlackboard;
 
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit()
         {
-            //Blackboard agentBlackboard = agent.GetComponent<Blackboard>();
-            //speed = agentBlackboard.GetVariableValue<float>("speed");
-
-            //agentBlackboard.SetVariableValue("speed", 0f);
-
+            //agentBlackboard = agent.GetComponent<Blackboard>();
             return null;
         }
 
@@ -28,24 +23,15 @@ namespace NodeCanvas.Tasks.Actions {
         //EndAction can be called from anywhere.
         protected override void OnExecute()
         {
-
         }
 
         //Called once per frame while the action is active.
         protected override void OnUpdate()
         {
-            //Move the object towards the target Transform
 
-            Vector3 directionToMove = targetTransform.position - agent.transform.position;
-
-            agent.transform.position += directionToMove.normalized * speed.value * Time.deltaTime;
-
-            float distanceToTarget = directionToMove.magnitude;
-            if (distanceToTarget < 0.5f)
-            {
-                EndAction(true);
-            }
-
+            //value = agentBlackboard.GetVariableValue<float>(variableName);
+            currentValue.value += rateOfChange * Time.deltaTime;
+            //agentBlackboard.SetVariableValue(variableName, value);
 
         }
 
