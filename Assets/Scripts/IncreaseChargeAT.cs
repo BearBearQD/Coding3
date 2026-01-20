@@ -6,7 +6,7 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class IncreaseChargeAT : ActionTask {
-        public float rateOfChange;
+        public BBParameter<float> rateOfChange;
         public BBParameter<float> currentValue;
         //private Blackboard agentBlackboard;
 
@@ -30,7 +30,7 @@ namespace NodeCanvas.Tasks.Actions {
         {
 
             //value = agentBlackboard.GetVariableValue<float>(variableName);
-            currentValue.value += rateOfChange * Time.deltaTime;
+            currentValue.value += rateOfChange.value * Time.deltaTime;
             //agentBlackboard.SetVariableValue(variableName, value);
 
         }
