@@ -1,15 +1,15 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
-using TMPro;
 using UnityEngine.UI;
+
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class CaffeineValue : ActionTask {
+	public class increaseCaffeine : ActionTask {
         public BBParameter<float> rateOfChange;
         public BBParameter<float> amount;
-		float maxAmount;
+        float maxAmount;
         public Image caffeineBar;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -21,14 +21,14 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			maxAmount = 100f;
-		}
+            maxAmount = 100f;
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
             amount.value += rateOfChange.value * Time.deltaTime;
-			float caffeineUI = amount.value / maxAmount;
-			caffeineBar.fillAmount = caffeineUI;
+            float caffeineUI = amount.value / maxAmount;
+            caffeineBar.fillAmount = caffeineUI;
         }
 
 		//Called when the task is disabled.
