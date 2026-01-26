@@ -27,8 +27,6 @@ namespace NodeCanvas.Tasks.Actions {
             {
                 currentChangeRateMinus = -15;
                 currentChangeRatePlus = 35;
-
-
             }
             else if (timeOfDay.value <= 80 && timeOfDay.value > 70)
             {
