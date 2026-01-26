@@ -337,8 +337,13 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
+<<<<<<< HEAD
     _translation: {x: 18, y: 189}
     _zoomFactor: 0.5491649
+=======
+    _translation: {x: -537.0757, y: 182.79578}
+    _zoomFactor: 0.99338585
+>>>>>>> 5728aabe2f350212e79ef19fd0488c49583f9367
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -578,7 +583,11 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
+<<<<<<< HEAD
     _translation: {x: -271, y: 47}
+=======
+    _translation: {x: -148, y: 56}
+>>>>>>> 5728aabe2f350212e79ef19fd0488c49583f9367
     _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
