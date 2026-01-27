@@ -334,12 +334,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _parentBlackboard: {fileID: 0}
-  _serializedBlackboard: '{"_variables":{"Speed":{"_value":1.0,"_name":"Speed","_id":"a3026b6a-1c05-4946-9ec5-bf02c799022f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  _serializedBlackboard: '{"_variables":{"Speed":{"_value":10.0,"_name":"Speed","_id":"a3026b6a-1c05-4946-9ec5-bf02c799022f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Count":{"_value":10.0,"_name":"Count","_id":"a68d3661-f2fa-4fd0-9a77-b6cd6296bedc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}}}'
   _objectReferences: []
   _serializedVariables:
-  - _json: '{"_value":1.0,"_name":"Speed","_id":"a3026b6a-1c05-4946-9ec5-bf02c799022f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
+  - _json: '{"_value":10.0,"_name":"Speed","_id":"a3026b6a-1c05-4946-9ec5-bf02c799022f","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
       mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"}'
     _references: []
   - _json: '{"_value":10.0,"_name":"Count","_id":"a68d3661-f2fa-4fd0-9a77-b6cd6296bedc","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
