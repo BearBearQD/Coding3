@@ -7,12 +7,12 @@ using UnityEngine.AI;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class WanderingAround_AT : ActionTask {
-        public BBParameter<NavMeshAgent> agent;
+        public BBParameter<NavMeshAgent> agents;
 		public float range;
         public BBParameter<Transform> centrePoint; 
 
-		//Use for initialization. This is called only once in the lifetime of the task.
-		//Return null if init was successfull. Return an error string otherwise
+		//Use for initialization. This is called only once in the lifetimse of the task.
+		//Return null if init was successfull. Return an error string otherwis
 		protected override string OnInit() {
 			return null;
 		}
@@ -26,13 +26,13 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			if (agent.value.remainingDistance <= agent.value.stoppingDistance)
+			if (agents.value.remainingDistance <= agents.value.stoppingDistance)
 			{
 				Vector3 point;
 
 				if(RandomPoint(centrePoint.value.position, range, out point))
 				{
-					agent.value.SetDestination(point);
+					agents.value.SetDestination(point);
 				}
 			}
 		}

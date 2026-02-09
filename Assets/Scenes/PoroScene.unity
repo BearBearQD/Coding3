@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: ab675e6698bde46fd87143fb0d7580cb, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 9ca22510633fbfd4399f1704cd9d5c72, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 57109799}
   - component: {fileID: 57109804}
   - component: {fileID: 57109803}
+  - component: {fileID: 57109805}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Untagged
@@ -274,6 +275,28 @@ MonoBehaviour:
   _updateMode: 0
   _graph: {fileID: 0}
   _blackboard: {fileID: 57109803}
+--- !u!195 &57109805
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57109798}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 1
+  m_BaseOffset: 0.5
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &409537159
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,7 +498,7 @@ MonoBehaviour:
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Health":{"_name":"Health","_id":"f62db7b5-c436-4350-b93c-2accb02342ea","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"Time":{"_value":100.0,"_name":"Time","_id":"f3830f51-3f31-4878-8ff9-bd50948a0276","$type":"NodeCanvas.Framework.Variable`1[[System.Single,
     mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]"},"PoroAgent":{"_value":1,"_name":"PoroAgent","_id":"55f3bf98-2f1d-4f1e-a1ef-2351bdc55770","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.AI.NavMeshAgent,
-    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"myTransform":{"_value":2,"_name":"myTransform","_id":"76769e99-b218-4672-8748-e149a603fab1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+    UnityEngine.AIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"},"CentrePoint":{"_value":2,"_name":"CentrePoint","_id":"76769e99-b218-4672-8748-e149a603fab1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
     UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}}}'
   _objectReferences:
   - {fileID: 0}
@@ -496,7 +519,7 @@ MonoBehaviour:
     _references:
     - {fileID: 0}
     - {fileID: 554745899}
-  - _json: '{"_value":1,"_name":"myTransform","_id":"76769e99-b218-4672-8748-e149a603fab1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
+  - _json: '{"_value":1,"_name":"CentrePoint","_id":"76769e99-b218-4672-8748-e149a603fab1","$type":"NodeCanvas.Framework.Variable`1[[UnityEngine.Transform,
       UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]"}'
     _references:
     - {fileID: 0}
@@ -514,17 +537,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.Idleing_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":461.3192,"y":312.4531},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleeping","_position":{"x":636.4512,"y":488.8604},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":1},"_position":{"x":750.0381,"y":629.7538},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":2},"_name":"EatingStuff","_position":{"x":869.9631,"y":276.9366},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"energyChangeRate":10.0,"timeChangeRate":20.0,"$type":"NodeCanvas.Tasks.Actions.globalTrackers_AT"}]},"_position":{"x":1014.897,"y":406.1648},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":1,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":60,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NowFull_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"newSkybox":1,"$type":"NodeCanvas.Tasks.Actions.Idleing_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":460.3192,"y":312.4531},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"newSkybox":2,"$type":"NodeCanvas.Tasks.Actions.Sleeping_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleeping","_position":{"x":636.4512,"y":491.8604},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":3},"_position":{"x":750.0381,"y":629.7538},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":4},"_name":"EatingStuff","_position":{"x":869.9631,"y":276.9366},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"energyChangeRate":10.0,"timeChangeRate":20.0,"$type":"NodeCanvas.Tasks.Actions.globalTrackers_AT"}]},"_position":{"x":1014.897,"y":405.1648},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":1,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"maxTime":100.0,"$type":"NodeCanvas.Tasks.Conditions.DayTime_CT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":60,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NowFull_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
+  - {fileID: 2100000, guid: c051fe5a20f72814f9643eb10ebbd2fc, type: 2}
+  - {fileID: 2100000, guid: d1fdb8e44b28da34d9e922cca0bc740e, type: 2}
   - {fileID: 11400000, guid: bd4277db1c53e7a4e9094c8d49856b9a, type: 2}
   - {fileID: 11400000, guid: 233420b4a586fb74783be0919ca9fac4, type: 2}
   _boundGraphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -8.586134, y: -48.794533}
-    _zoomFactor: 0.75009763
+    _translation: {x: -324.89032, y: -228.36761}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -543,7 +568,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 9.46
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -552,7 +577,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0
+  m_BaseOffset: 0.94
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!1 &905374654
