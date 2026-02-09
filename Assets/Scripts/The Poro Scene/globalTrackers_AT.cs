@@ -7,7 +7,8 @@ namespace NodeCanvas.Tasks.Actions {
 	public class globalTrackers_AT : ActionTask {
         public BBParameter<float> time;
         public BBParameter<float> energy;
-		public float energyChangeRate; 
+		public float energyChangeRate;
+		public float timeChangeRate;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -23,6 +24,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+			time.value -= timeChangeRate * Time.deltaTime;
             energy.value -= energyChangeRate * Time.deltaTime;
 
         }
