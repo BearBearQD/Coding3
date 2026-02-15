@@ -29,7 +29,8 @@ namespace NodeCanvas.Tasks.Conditions {
 		protected override bool OnCheck() {
             Collider[] objectsInRange = Physics.OverlapSphere(agent.transform.position, scanRadius, targetMask);
 
-			return objectsInRange.Length <= 1;
+			Debug.Log(objectsInRange.Length);
+			return objectsInRange.Length >= 1;
 
         }
 	}

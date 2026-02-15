@@ -224,7 +224,7 @@ Transform:
   m_GameObject: {fileID: 57109798}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6819, y: 3.32, z: -4.28}
+  m_LocalPosition: {x: 5.6819, y: 3.32, z: -44.93}
   m_LocalScale: {x: 2.1402, y: 2.1402, z: 2.1402}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -287,17 +287,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
   _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"agents":{"_name":"Enemy
-    Nav Agent","_targetVariableID":"89e650d3-bc7c-4795-861e-f9de32a06723"},"range":30.0,"centrePoint":{"_value":1},"$type":"NodeCanvas.Tasks.Actions.WanderingAround_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wandering","_position":{"x":358.621,"y":366.2708},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"},{"parent":{"_value":2},"clonePosition":{},"cloneRotation":{},"saveCloneAs":{"_name":"Food","_targetVariableID":"26f52d5f-e077-4e9b-8e21-0c804fd06bfd"},"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.InstantiateGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":607.1872,"y":413.4598},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"energy":{"_name":"Health","_targetVariableID":"145f91e3-7d79-4df6-bf11-6111e084b2c8"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    Nav Agent","_targetVariableID":"89e650d3-bc7c-4795-861e-f9de32a06723"},"range":30.0,"centrePoint":{"_value":1},"$type":"NodeCanvas.Tasks.Actions.WanderingAround_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wandering","_position":{"x":358.621,"y":364.7328},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"actions":[{"parent":{"_value":1},"clonePosition":{},"cloneRotation":{},"saveCloneAs":{"_name":"Food","_targetVariableID":"26f52d5f-e077-4e9b-8e21-0c804fd06bfd"},"overrideAgent":{"_type":"UnityEngine.Transform","_value":2},"$type":"NodeCanvas.Tasks.Actions.InstantiateGameObject"},{"immediately":true,"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":608.5203,"y":408.4604},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"health":{"_name":"Health","_targetVariableID":"145f91e3-7d79-4df6-bf11-6111e084b2c8"},"$type":"NodeCanvas.Tasks.Conditions.Dead_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 905374655}
-  - {fileID: 57109802}
+  - {fileID: 4739913359930733011, guid: e139a6fc8da6d0442a3954b3c9d09dfe, type: 3}
   _boundGraphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 210.34763, y: 45.14017}
-    _zoomFactor: 0.40402383
+    _translation: {x: 271.88095, y: 153.43848}
+    _zoomFactor: 0.47923827
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -328,6 +328,37 @@ NavMeshAgent:
   m_BaseOffset: 0.5
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!1 &75367847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 75367848}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &75367848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75367847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.998082, y: -3.7168603, z: 12.168348}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &409537159
 GameObject:
   m_ObjectHideFlags: 0
@@ -489,6 +520,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AnyConv.com__model
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b0c3b746a56c214eac151b7eb0897aa, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 8485659205241096947, guid: 2b0c3b746a56c214eac151b7eb0897aa, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -568,7 +603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
-  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"newSkybox":1,"$type":"NodeCanvas.Tasks.Actions.Idleing_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":460.3192,"y":312.4531},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"newSkybox":2,"$type":"NodeCanvas.Tasks.Actions.Sleeping_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleeping","_position":{"x":636.4512,"y":491.8604},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":3},"_position":{"x":750.0381,"y":629.7538},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":4},"_name":"EatingStuff","_position":{"x":921.9631,"y":321.9366},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"energyChangeRate":10.0,"timeChangeRate":1.0,"$type":"NodeCanvas.Tasks.Actions.globalTrackers_AT"}]},"_position":{"x":1014.897,"y":405.1648},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":1,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"maxTime":100.0,"$type":"NodeCanvas.Tasks.Conditions.DayTime_CT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":60,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NowFull_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+  _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"newSkybox":1,"$type":"NodeCanvas.Tasks.Actions.Idleing_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Idle","_position":{"x":460.3192,"y":312.4531},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"newSkybox":2,"$type":"NodeCanvas.Tasks.Actions.Sleeping_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Sleeping","_position":{"x":636.4512,"y":491.8604},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_nestedFSM":{"_value":3},"_position":{"x":750.0381,"y":629.7538},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"2"},{"_nestedFSM":{"_value":4},"_name":"EatingStuff","_position":{"x":921.9631,"y":317.9313},"$type":"NodeCanvas.StateMachines.NestedFSMState","$id":"3"},{"_conditionList":{"conditions":[]},"_actionList":{"executionMode":1,"actions":[{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"energyChangeRate":10.0,"timeChangeRate":1.0,"$type":"NodeCanvas.Tasks.Actions.globalTrackers_AT"}]},"_position":{"x":1014.897,"y":405.1648},"$type":"NodeCanvas.StateMachines.OnFSMUpdate"}],"connections":[{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":1,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"maxTime":100.0,"$type":"NodeCanvas.Tasks.Conditions.DayTime_CT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"minNum":1,"maxNum":100,"rangeNum":60,"$type":"NodeCanvas.Tasks.Conditions.PoroRandom_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NeedFood_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"3"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"2"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Conditions.NowFull_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"0"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"time":{"_name":"Time","_targetVariableID":"f3830f51-3f31-4878-8ff9-bd50948a0276"},"$type":"NodeCanvas.Tasks.Conditions.NightTime_CT"},"_sourceNode":{"$ref":"3"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 2100000, guid: c051fe5a20f72814f9643eb10ebbd2fc, type: 2}
@@ -579,8 +614,8 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: -87, y: -274}
-    _zoomFactor: 1
+    _translation: {x: -49.90698, y: -143.26431}
+    _zoomFactor: 0.7489876
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0
@@ -641,7 +676,7 @@ Transform:
   m_GameObject: {fileID: 905374654}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.7, y: 1.12, z: -1.8}
+  m_LocalPosition: {x: 3.7, y: 2.74, z: -1.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -937,3 +972,4 @@ SceneRoots:
   - {fileID: 2013336748}
   - {fileID: 6589199999048611085}
   - {fileID: 905374655}
+  - {fileID: 75367848}

@@ -27,6 +27,8 @@ namespace NodeCanvas.Tasks.Actions {
 			time.value -= timeChangeRate * Time.deltaTime;
             energy.value -= energyChangeRate * Time.deltaTime;
 
+
+
         }
 
 		//Called when the task is disabled.
