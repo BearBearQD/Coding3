@@ -42,7 +42,7 @@ namespace NodeCanvas.Tasks.Actions {
             agents.value.SetDestination(currentTarget.position);
 
             Collider[] objectsEatingInRange = Physics.OverlapSphere(agent.transform.position, eatingRange, targetMask);
-            if (objectsInRange.Length > 0)
+            if (objectsEatingInRange.Length >= 1)
             {
                 energy.value = 100f;
             }

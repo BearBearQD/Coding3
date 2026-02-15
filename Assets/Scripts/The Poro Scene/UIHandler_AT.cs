@@ -1,3 +1,4 @@
+using NodeCanvas.DialogueTrees;
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using TMPro;
@@ -9,6 +10,7 @@ namespace NodeCanvas.Tasks.Actions {
 	public class UIHandler_AT : ActionTask {
         GameObject stateTextObject;
 		public string text = "Current State: " + "";
+		TMP_Text stateText;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -19,20 +21,20 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			stateTextObject = GameObject.FindWithTag("State Text");
-			TMP_Text stateText = stateTextObject.GetComponent<TMP_Text>();
 
-			stateText.text = text;
-		}
+            stateTextObject = GameObject.FindWithTag("State Text");
+            stateText = stateTextObject.GetComponent<TMP_Text>();
+            stateText.text = text;
+        }
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
-		}
+
+        }
 
 		//Called when the task is disabled.
 		protected override void OnStop() {
-			
+
 		}
 
 		//Called when the task is paused.
