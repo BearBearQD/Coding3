@@ -9,7 +9,7 @@ namespace NodeCanvas.Tasks.Actions {
 	public class WanderingAround_AT : ActionTask {
         public BBParameter<NavMeshAgent> agents;
 		public float range;
-        public BBParameter<Transform> centrePoint; 
+        GameObject centrePoint; 
 
 		//Use for initialization. This is called only once in the lifetimse of the task.
 		//Return null if init was successfull. Return an error string otherwis
@@ -21,7 +21,7 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			
+			centrePoint = GameObject.FindWithTag("Centre");
 		}
 
 		//Called once per frame while the action is active.
@@ -30,7 +30,7 @@ namespace NodeCanvas.Tasks.Actions {
 			{
 				Vector3 point;
 
-				if(RandomPoint(centrePoint.value.position, range, out point))
+				if(RandomPoint(centrePoint.transform.position, range, out point))
 				{
 					agents.value.SetDestination(point);
 				}

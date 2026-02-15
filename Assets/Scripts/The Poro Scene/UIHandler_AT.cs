@@ -1,17 +1,14 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class Idleing_AT : ActionTask {
-
-		public float RotationSpeed;
-        public Material newSkybox;
-
-
+	public class UIHandler_AT : ActionTask {
+        GameObject stateTextObject;
+		public string text = "Current State: " + "";
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit() {
@@ -22,8 +19,11 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			Effects();
-        }
+			stateTextObject = GameObject.FindWithTag("State Text");
+			TMP_Text stateText = stateTextObject.GetComponent<TMP_Text>();
+
+			stateText.text = text;
+		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
@@ -39,12 +39,5 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnPause() {
 			
 		}
-        void Effects()
-        {
-
-            RenderSettings.skybox = newSkybox;
-            DynamicGI.UpdateEnvironment();
-
-        }
-    }
+	}
 }
