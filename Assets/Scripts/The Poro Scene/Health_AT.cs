@@ -1,16 +1,18 @@
 using NodeCanvas.Framework;
 using ParadoxNotion.Design;
 using UnityEngine;
+using UnityEngine.AI;
 
 
 namespace NodeCanvas.Tasks.Actions {
 
-	public class Idleing_AT : ActionTask {
+	public class Health_AT : ActionTask {
 
-		public float RotationSpeed;
-        public Material newSkybox;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
+        public BBParameter<float> Health;
+		public GameObject food;
+		public GameObject self;
         protected override string OnInit() {
 			return null;
 		}
@@ -19,12 +21,15 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
-			Effects();
-        }
+			EndAction(true);
+		}
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
-			
+			if(Health.value <= 0)
+			{
+				GameObject.Instantiate(food, agent.transform.position, agent.transform.rotation);
+			}
 		}
 
 		//Called when the task is disabled.
@@ -36,11 +41,5 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnPause() {
 			
 		}
-
-        void Effects()
-        {
-            RenderSettings.skybox = newSkybox;
-            DynamicGI.UpdateEnvironment();
-        }
-    }
+	}
 }

@@ -5,8 +5,8 @@ using static UnityEngine.EventSystems.EventTrigger;
 
 namespace NodeCanvas.Tasks.Conditions {
 
-	public class NowFull_CT : ConditionTask {
-        public BBParameter<float> energy;
+	public class Dead_CT : ConditionTask {
+        public BBParameter<float> health;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
         protected override string OnInit(){
@@ -26,7 +26,7 @@ namespace NodeCanvas.Tasks.Conditions {
 		//Called once per frame while the condition is active.
 		//Return whether the condition is success or failure.
 		protected override bool OnCheck() {
-            return energy.value >= 100;
+            return health.value <= 0;
         }
 	}
 }
