@@ -125,7 +125,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _serializedExposedParameters: []
   _boundGraphSerialization: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"agents":{"_name":"Enemy
-    Nav Agent","_targetVariableID":"89e650d3-bc7c-4795-861e-f9de32a06723"},"range":30.0,"centrePoint":{"_name":""},"$type":"NodeCanvas.Tasks.Actions.WanderingAround_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wandering","_position":{"x":356.5344,"y":364.7328},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"actions":[{"parent":{},"clonePosition":{},"cloneRotation":{},"saveCloneAs":{"_name":"Food","_targetVariableID":"26f52d5f-e077-4e9b-8e21-0c804fd06bfd"},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Actions.InstantiateGameObject"},{"immediately":true,"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":606.4337,"y":412.6336},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"health":{"_name":"Health","_targetVariableID":"145f91e3-7d79-4df6-bf11-6111e084b2c8"},"$type":"NodeCanvas.Tasks.Conditions.Dead_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    Nav Agent","_targetVariableID":"89e650d3-bc7c-4795-861e-f9de32a06723"},"range":30.0,"$type":"NodeCanvas.Tasks.Actions.WanderingAround_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Wandering","_position":{"x":356.5344,"y":364.7328},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"actions":[{"parent":{},"clonePosition":{},"cloneRotation":{},"saveCloneAs":{"_name":"Food","_targetVariableID":"26f52d5f-e077-4e9b-8e21-0c804fd06bfd"},"overrideAgent":{"_type":"UnityEngine.Transform","_value":1},"$type":"NodeCanvas.Tasks.Actions.InstantiateGameObject"},{"immediately":true,"$type":"NodeCanvas.Tasks.Actions.DestroyGameObject"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":606.4337,"y":414.7202},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"}],"connections":[{"_condition":{"health":{"_name":"Health","_targetVariableID":"145f91e3-7d79-4df6-bf11-6111e084b2c8"},"$type":"NodeCanvas.Tasks.Conditions.Dead_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _boundGraphObjectReferences:
   - {fileID: 0}
   - {fileID: 4739913359930733011, guid: e139a6fc8da6d0442a3954b3c9d09dfe, type: 3}
@@ -133,8 +133,8 @@ MonoBehaviour:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 271.88095, y: 153.43848}
-    _zoomFactor: 0.47923827
+    _translation: {x: -145.01314, y: -147.63689}
+    _zoomFactor: 1
   _firstActivation: 0
   _enableAction: 0
   _disableAction: 0

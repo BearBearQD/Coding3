@@ -6,7 +6,11 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class Sleeping_AT : ActionTask {
+
+		// Getting the time variable from the blackboard
         public BBParameter<float> time;
+
+		//Getting a sky box to change to
         public Material newSkybox;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -18,7 +22,11 @@ namespace NodeCanvas.Tasks.Actions {
 		//Call EndAction() to mark the action as finished, either in success or failure.
 		//EndAction can be called from anywhere.
 		protected override void OnExecute() {
+
+			// Setting the time variable to be 200
 			time.value = 200;
+
+			// stuff for the sky box
             Effects();
         }
 
@@ -39,6 +47,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 		void Effects()
 		{
+			// Changing the night time one
             RenderSettings.skybox = newSkybox;
             DynamicGI.UpdateEnvironment();
         }

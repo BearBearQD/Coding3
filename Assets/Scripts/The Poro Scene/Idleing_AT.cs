@@ -8,7 +8,7 @@ namespace NodeCanvas.Tasks.Actions {
 
 	public class Idleing_AT : ActionTask {
 
-		public float RotationSpeed;
+		// This is getting a sky box to change over to when idle is activated
         public Material newSkybox;
 
 
@@ -41,7 +41,7 @@ namespace NodeCanvas.Tasks.Actions {
 		}
         void Effects()
         {
-
+			// Make the sky box the one that was set before
             RenderSettings.skybox = newSkybox;
             DynamicGI.UpdateEnvironment();
 

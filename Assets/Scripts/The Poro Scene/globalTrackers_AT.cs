@@ -5,8 +5,12 @@ using UnityEngine;
 namespace NodeCanvas.Tasks.Actions {
 
 	public class globalTrackers_AT : ActionTask {
+
+		// Getting some variables from the blackboard
         public BBParameter<float> time;
         public BBParameter<float> energy;
+
+		// At what rate should these variables be changing
 		public float energyChangeRate;
 		public float timeChangeRate;
         //Use for initialization. This is called only once in the lifetime of the task.
@@ -24,6 +28,8 @@ namespace NodeCanvas.Tasks.Actions {
 
 		//Called once per frame while the action is active.
 		protected override void OnUpdate() {
+
+			//Making these values change based on time.deltatime
 			time.value -= timeChangeRate * Time.deltaTime;
             energy.value -= energyChangeRate * Time.deltaTime;
 
