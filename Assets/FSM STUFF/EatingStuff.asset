@@ -15,19 +15,18 @@ MonoBehaviour:
   _serializedGraph: '{"type":"NodeCanvas.StateMachines.FSM","nodes":[{"_actionList":{"executionMode":1,"actions":[{"agents":{"_name":"PoroAgent","_targetVariableID":"55f3bf98-2f1d-4f1e-a1ef-2351bdc55770"},"range":30.0,"$type":"NodeCanvas.Tasks.Actions.WanderingAround_AT"},{"text":"Current
     State: Looking For Food","imageToFill":1,"$type":"NodeCanvas.Tasks.Actions.UIHandler_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Looking
     For food","_position":{"x":612.2645,"y":454.9577},"$type":"NodeCanvas.StateMachines.ActionState","$id":"0"},{"_actionList":{"executionMode":1,"actions":[{"targetMask":{"value":128},"scanRadius":100.0,"fightRadius":5.0,"agents":{"_name":"PoroAgent","_targetVariableID":"55f3bf98-2f1d-4f1e-a1ef-2351bdc55770"},"$type":"NodeCanvas.Tasks.Actions.ChasingAndFighting_AT"},{"text":"Current
-    State: Fighting","imageToFill":2,"$type":"NodeCanvas.Tasks.Actions.UIHandler_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Fighting","_position":{"x":422.9127,"y":225.5178},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"targetMask":{"value":256},"lol":3,"scanRadius":100.0,"eatingRange":3.0,"agents":{"_name":"PoroAgent","_targetVariableID":"55f3bf98-2f1d-4f1e-a1ef-2351bdc55770"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Actions.Eating_AT"},{"text":"Current
-    State: Eating","imageToFill":4,"$type":"NodeCanvas.Tasks.Actions.UIHandler_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":819.0754,"y":323.5649},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"}],"connections":[{"_condition":{"targetMask":{"value":128},"scanRadius":15.0,"$type":"NodeCanvas.Tasks.Conditions.CheckingForEnemy_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"targetMask":{"value":256},"scanRadius":100.0,"$type":"NodeCanvas.Tasks.Conditions.CheckingForEnemy_CT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
+    State: Fighting","imageToFill":2,"$type":"NodeCanvas.Tasks.Actions.UIHandler_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_name":"Fighting","_position":{"x":422.9127,"y":225.5178},"$type":"NodeCanvas.StateMachines.ActionState","$id":"1"},{"_actionList":{"executionMode":1,"actions":[{"targetMask":{"value":256},"scanRadius":100.0,"eatingRange":3.0,"agents":{"_name":"PoroAgent","_targetVariableID":"55f3bf98-2f1d-4f1e-a1ef-2351bdc55770"},"energy":{"_name":"Energy","_targetVariableID":"578f4b46-b08b-442f-b912-0d42710b5806"},"$type":"NodeCanvas.Tasks.Actions.Eating_AT"},{"text":"Current
+    State: Eating","imageToFill":3,"$type":"NodeCanvas.Tasks.Actions.UIHandler_AT"}]},"_color":{"r":1.0,"g":0.42,"b":0.32,"a":1.0},"_position":{"x":819.0754,"y":323.5649},"$type":"NodeCanvas.StateMachines.ActionState","$id":"2"}],"connections":[{"_condition":{"targetMask":{"value":128},"scanRadius":15.0,"$type":"NodeCanvas.Tasks.Conditions.CheckingForEnemy_CT"},"_sourceNode":{"$ref":"0"},"_targetNode":{"$ref":"1"},"$type":"NodeCanvas.StateMachines.FSMConnection"},{"_condition":{"targetMask":{"value":256},"scanRadius":100.0,"$type":"NodeCanvas.Tasks.Conditions.CheckingForEnemy_CT"},"_sourceNode":{"$ref":"1"},"_targetNode":{"$ref":"2"},"$type":"NodeCanvas.StateMachines.FSMConnection"}],"canvasGroups":[],"localBlackboard":{"_variables":{}}}'
   _objectReferences:
   - {fileID: 0}
   - {fileID: 21300000, guid: 4ff29d645cc156a43aff9d19d2e5fe88, type: 3}
   - {fileID: 21300000, guid: bbfde64a0173af048916cf90b91701b6, type: 3}
-  - {fileID: 919132149155446097, guid: 4fb4d7ca0bc8776468f9517f917e6f0e, type: 3}
   - {fileID: 21300000, guid: 48bfd710979c98f4c8b2e1d1233e800c, type: 3}
   _graphSource:
     _version: 3.33
     _category: 
     _comments: 
-    _translation: {x: 214, y: 218}
-    _zoomFactor: 0.45021397
+    _translation: {x: -91.51911, y: -46.15259}
+    _zoomFactor: 0.7577425
   _haltSerialization: 0
   _externalSerializationFile: {fileID: 0}
