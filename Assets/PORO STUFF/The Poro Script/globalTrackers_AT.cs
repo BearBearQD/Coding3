@@ -10,8 +10,8 @@ namespace NodeCanvas.Tasks.Actions {
         public BBParameter<float> time;
         public BBParameter<float> energy;
 
-		// At what rate should these variables be changing
-		public float energyChangeRate;
+        // At what rate should these variables be changing
+        public float energyChangeRate;
 		public float timeChangeRate;
         //Use for initialization. This is called only once in the lifetime of the task.
         //Return null if init was successfull. Return an error string otherwise
@@ -31,10 +31,12 @@ namespace NodeCanvas.Tasks.Actions {
 
 			//Making these values change based on time.deltatime
 			time.value -= timeChangeRate * Time.deltaTime;
-            energy.value -= energyChangeRate * Time.deltaTime;
 
 
-
+			if(time.value <= 100)
+			{
+                energy.value -= energyChangeRate * Time.deltaTime;
+            }
         }
 
 		//Called when the task is disabled.
