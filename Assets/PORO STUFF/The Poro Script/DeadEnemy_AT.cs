@@ -21,6 +21,7 @@ namespace NodeCanvas.Tasks.Actions {
 		protected override void OnExecute() {
             GameObject cookie = GameObject.Instantiate(food);
 			cookie.transform.position = agent.transform.position;
+			EndAction(true);
         }
 
 		//Called once per frame while the action is active.
